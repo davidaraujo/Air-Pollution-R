@@ -29,6 +29,5 @@ pollutantmean <- function(directory, pollutant, id) {
   #print(totalMeans)
   totalMeans <- na.omit(totalMeans)
   result <- round(mean(totalMeans),digits=3)
-  
   return(result)
 }

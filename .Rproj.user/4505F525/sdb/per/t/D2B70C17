@@ -1,0 +1,17 @@
+{
+    "contents" : "\n# read climate data from csv file \ndata <- read.csv(\"hw1_data.csv\")\ndata <- na.omit(data)\n\n# get list of Ozone > 31 and Temp > 90\nl1 <- data[ data$Ozone > 31 & data$Temp > 90, ]\nprint(mean(l1$Solar.R))\n\n# get list of Month = 6 \nl2 <- data[ data$Month == 6 , ]\nprint(mean(l2$Temp))\n\n# get list of Month = 5 \nl2 <- data[ data$Month == 5 , ]\nprint(max(l2$Ozone))",
+    "created" : 1407978811355.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1798253115",
+    "id" : "D2B70C17",
+    "lastKnownWriteTime" : 1407980459,
+    "path" : "~/GitHub/Air-Pollution-R/climate_stats.R",
+    "project_path" : "climate_stats.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

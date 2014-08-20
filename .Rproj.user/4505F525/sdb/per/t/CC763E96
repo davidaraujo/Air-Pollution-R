@@ -1,12 +1,12 @@
 {
     "contents" : "pollutantmean <- function(directory, pollutant, id) {\n  ## 'directory' is a character vector of length 1 indicating\n  ## the location of the CSV files\n  \n  ## 'pollutant' is a character vector of length 1 indicating\n  ## the name of the pollutant for which we will calculate the\n  ## mean; either \"sulfate\" or \"nitrate\".\n  \n  ## 'id' is an integer vector indicating the monitor ID numbers\n  ## to be used\n  \n  ## Return the mean of the pollutant across all monitors list\n  ## in the 'id' vector (ignoring NA values)\n  \n  totalMeans <- {}\n  \n  for (i in id) {\n    i <- sprintf(\"%03d\", i)\n    file <- paste(directory, \"/\",i,\".csv\",sep=\"\")\n    monitor <- read.csv(file)\n    measure <- monitor[pollutant]\n    measure <- na.omit(measure)\n    measure <- as.matrix(measure)\n    totalMeans <- c(totalMeans, measure)\n  }\n  \n  #print(totalMeans)\n  #totalMeans <- as.matrix(totalMeans)\n  #print(totalMeans)\n  totalMeans <- na.omit(totalMeans)\n  result <- round(mean(totalMeans),digits=3)\n  return(result)\n}",
     "created" : 1407828158791.000,
-    "dirty" : true,
+    "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
     "hash" : "1007563828",
     "id" : "CC763E96",
-    "lastKnownWriteTime" : 1407829283,
+    "lastKnownWriteTime" : 1407978822,
     "path" : "~/GitHub/Air-Pollution-R/pollutantmean.R",
     "project_path" : "pollutantmean.R",
     "properties" : {
